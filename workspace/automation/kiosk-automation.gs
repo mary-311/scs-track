@@ -1,58 +1,78 @@
+
 // AI-assisted, directed by belisha -- the FS5a label, the same words as the receipt log
-// function checkStock(){
+
+function checkStock() {
   const ss = SpreadsheetApp.getActiveSpreadsheet();
   const dashboard = ss.getSheetByName("DASHBOARD");
-  const StockData = dashboard.getRange("A12:C15").getValues();
+  const stockData = dashboard.getRange("A12:C15").getValues();
 
-  const lowStockItems =StockData.filter ( row => row[2] === "REORDER");
+  const lowStockItems = stockData.filter(row => row[2] === "REORDER");
+
   let reminders = ss.getSheetByName("REMINDERS");
+
   if (!reminders) {
-    reminders = ss.insertSheet ("REMINDERS");
+    reminders = ss.insertSheet("REMINDERS");
   }
+
   reminders.clearContents();
 
-  reminders.getRange("A1:C1").setValues (
+  reminders.getRange("A1:C1").setValues(
     [["ITEM", "CURRENT STOCK", "STATUS"]]
   );
+
   if (lowStockItems.length > 0) {
-    reminders.getRange( 2, 1, lowStockItems.length, 3). setValues(lowStockItems);
+    reminders.getRange(2, 1, lowStockItems.length, 3)
+      .setValues(lowStockItems);
   }
-  }
-
-
-
-
-function generateMonthlyreport(){
-  const ss = SpreadsheetApp.getActiveSpreadsheet();
-  const record = ss.getSheetByName("RECORD");
-  const data = record.getActiveRange("A2:F1000").getValues();
-  const reportMonth = 10;
-  const reportYear = 2026;
-  const monthName = new Date (reportYear, reportMonth).tolocalTimeString("en",{month: "long"});
-
-   const monthlabel = '${monthName} ${reportYear}';
-   const monthlySales = data.filter(row => row[0] && typeof row[0].getMonth === "function" && row[0].getMonth()===reportMonth && row[0].getFullYear()===reportYear && row[2]==="OUT");
-
-   const totalSales = monthlySales.reduce ((sum,row) => sum + Number((row[5] || 0),0));
-   const unitsSold = monthlySales.reduce((sum,row) => sum + Number(row[3] || 0), 0);
-
-   let report = ss.getSheetByName(",MONTHLY REPORT");
-   if (!report) {
-    report = ss.insersheet ("MONTHLY REPORT");
-   }
-   report.getclearContents();
-
-   report.getRange("A1:C1").setValues (
-    [["REPORT MONTH", "TOTAL SALES", "UNIT SOLD"]]
-   );
-   report.getActiveRange("A2:C2").setValues (
-    [[monthlabel, totalsales,unitsSold]]
-   );
 }
 
+function generateMonthlyReport() {
+  const ss = SpreadsheetApp.getActiveSpreadsheet();
+  const record = ss.getSheetByName("RECORD");
+  const data = record.getRange("A2:F1000").getValues();
+
+  const reportMonth = 9;
+  const reportYear = 2026;
+
+  const monthName = new Date(reportYear, reportMonth, 1)
+    .toLocaleString("en-US", { month: "long" });
+
+  const monthLabel = `${monthName} ${reportYear}`;
+
+  const monthlySales = data.filter(row =>
+    row[0] &&
+    typeof row[0].getMonth === "function" &&
+    row[0].getMonth() === reportMonth &&
+    row[0].getFullYear() === reportYear &&
+    row[2] === "OUT"
+  );
+
+  const totalSales = monthlySales.reduce(
+    (sum, row) => sum + Number(row[5] || 0), 0
+  );
+
+  const unitsSold = monthlySales.reduce(
+    (sum, row) => sum + Number(row[3] || 0), 0
+  );
+
+  let report = ss.getSheetByName("MONTHLY REPORT");
+
+  if (!report) {
+    report = ss.insertSheet("MONTHLY REPORT");
+  }
+
+  report.clearContents();
+
+  report.getRange("A1:C1").setValues(
+    [["REPORT MONTH", "TOTAL SALES", "UNITS SOLD"]]
+  );
+
+  report.getRange("A2:C2").setValues(
+    [[monthLabel, totalSales, unitsSold]]
+  );
+}
 
 function onEdit(e) {
-
   const sheet = e.range.getSheet();
 
   if (sheet.getName() !== "INTAKE") return;
@@ -83,5 +103,4 @@ function onEdit(e) {
   } else {
     checkCell.setValue("INVALID ENTRY");
   }
-
 }
