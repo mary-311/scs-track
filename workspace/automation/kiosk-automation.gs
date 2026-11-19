@@ -1,3 +1,4 @@
+// AI-assisted, directed by belisha -- the FS5a label, the same words as the receipt log
 
 // AI-assisted, directed by belisha -- the FS5a label, the same words as the receipt log
 
