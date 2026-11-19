@@ -1,8 +1,8 @@
 # Reading log -- SCS3.5
 
 Script: workspace/automation/kiosk-automation.gs
-Read to the last line before the first run: yes / no
-Label: AI-assisted, directed by belisha -- the FS5a label, the same words as the receipt log
+Read to the last line before the first run: yes
+Label: AI-assisted, directed by belisha
 
 <!-- Every line of the script in your own words, BEFORE the first run.  One row per line, or a range such as 12-14 -->
 <!-- when the lines are one statement.  Which word: variable, sequence, condition, loop, trigger.  Blank lines,  -->
