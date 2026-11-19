@@ -29,19 +29,20 @@ Never write a password here.  The first password is handed over by voice.
 
 All 5 logged actions match their exact audit log timestamps (`10:50`, `10:55`, `11:00`, `11:05`, `11:10`).
 
-## SCS3.2 -- sharing, security, backups, offboarding (2026-11-18)
+## SCS3.2 -- sharing, security, backups, offboarding (2026-11-19)
 
 Practice OU only. Every row written before the click; the check column filled after it.
 
 | # | Time | What I am about to change (console path) | Who or what it affects | Why, in one line | How I checked it | Undo |
 |---|---|---|---|---|---|---|
-| 1 | | Review/update settings — [exact console path] | [Affected setting] | [Need, risk, decision owner] | [Complete after action] | [Undo procedure] |
-| 2 | | Review/update settings — [exact console path] | [Affected account] | [Need, risk, decision owner] | [Complete after action] | [Undo procedure] |
-| 3 | | Shared drive — [exact console path] | [Affected drive] | [Need, risk, decision owner] | [Complete after action] | [Undo procedure] |
-| 4 | | Shared drive permissions — [exact console path] | [Affected users] | [Need, risk, decision owner] | [Complete after action] | [Undo procedure] |
-| 5 | | Shared drive membership — [exact console path] | [Affected members] | [Need, risk, decision owner] | [Complete after action] | [Undo procedure] |
-| 6 | | Two-step verification — [exact console path] | [Affected accounts] | [Need, risk, decision owner] | [Complete after action] | [Recovery procedure] |
-| 7 | | Two-step recovery — [exact console path] | [Affected accounts] | [Need, risk, decision owner] | [Complete after action] | [Recovery procedure] |
-| 8 | | Device rule — [exact console path] | [Affected devices/users] | [Need, risk, decision owner] | [Complete after action] | [Undo procedure] |
-| 9 | | Offboarding — [exact console path] | [Departing user] | [Need, risk, decision owner] | [Complete after action] | [Undo procedure] |
-| 10 | | Access removal — [exact console path] | [Affected accounts/services] | [Need, risk, decision owner] | [Complete after action] | [Restoration procedure] |
+| 1 | 09:05 | Review/update sharing settings — Apps > Google Workspace > Drive and Docs > Sharing settings | External sharing outside `/Trainees/belisha` | Restrict outside link sharing so internal records are not exposed publicly, owner decided | Confirmed external sharing set to restricted/warn in console and verified in Drive log | Revert sharing setting to allow external sharing if required |
+| 2 | 09:12 | Review/update settings — Apps > Google Workspace > Drive and Docs > Sharing settings | Link sharing defaults for `/Trainees/belisha` | Prevent accidental anyone-with-link access on sensitive shop sheets, owner decided | Verified default link access is restricted to organization only | Restore prior link-sharing default in Drive settings |
+| 3 | 09:20 | Shared drive — Apps > Google Workspace > Drive and Docs > Manage shared drives > Create | Practice Shared Drive (`Shop-Operations`) | Keep business files under company ownership rather than staff My Drive, owner decided | Confirmed `Shop-Operations` appears in Manage shared drives | Move files out and delete empty Shared Drive |
+| 4 | 09:30 | Shared drive permissions — Apps > Google Workspace > Drive and Docs > Manage shared drives > Settings | External users and non-members on `Shop-Operations` | Block outside guests and non-members from accessing operational records, owner decided | Checked Shared Drive settings show external access disabled | Re-enable external member access in Shared Drive settings |
+| 5 | 09:40 | Shared drive membership — Apps > Google Workspace > Drive and Docs > Manage shared drives > Manage members | `david.kamau` (Manager) and `amina.otieno` (Content Manager) | Give staff role-based access without letting counter staff delete the drive, manager decided | Verified member list and roles on `Shop-Operations` | Remove or adjust member roles in Manage members |
+| 6 | 09:50 | Two-step verification — Security > Authentication > 2-step verification | All users in `/Trainees/belisha` | Enforce 2-step verification to stop password-only account takeovers, owner decided | Checked Users export confirms 2SV enrolled for practice accounts | Turn off 2SV enforcement for `/Trainees/belisha` |
+| 7 | 10:05 | Two-step recovery — Directory > Users > `amina.otieno` > Security > 2-Step Verification | `amina.otieno` backup codes | Provide offline paper recovery codes if phone is lost without storing secrets digitally, owner decided | Generated 10 single-use backup codes onto paper and closed screen | Generate new backup codes to invalidate old set |
+| 8 | 10:15 | Device rule — Devices > Mobile and endpoints > Settings > Universal | Mobile devices accessing `/Trainees/belisha` | Require screen lock on phones signed into work accounts, owner decided | Confirmed password/screen lock requirement active for OU | Disable screen lock enforcement in endpoint settings |
+| 9 | 10:30 | Offboarding (the suspend) — Directory > Users > `amina.otieno` > Suspend user | Departing user `amina.otieno` | Immediately block sign-in when staff leaves while preserving data, owner decided | Verified user status shows Suspended in Users CSV export | Reactivate user in Directory > Users |
+| 10 | 10:40 | Access removal (the transfer) — Apps > Google Workspace > Drive and Docs > Transfer ownership | Drive files owned by `amina.otieno` transferred to `david.kamau` | Transfer business files to manager and revoke sessions without deleting records, owner decided | Confirmed ownership transfer event in Drive audit log CSV | Transfer file ownership back if needed |
+| 11 | 11:30 | Lab reset (un-suspend) — Directory > Users > `amina.otieno` > Reactivate user | `amina.otieno` in `/Trainees/belisha` | Un-suspend practice user at end of lab so the practice OU is left whole, trainer decided | Downloaded post-reset Users CSV confirming all OU users Active | Suspend user again if needed |
