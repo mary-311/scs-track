@@ -1,4 +1,5 @@
-function checkStock(){
+// AI-assisted, directed by belisha -- the FS5a label, the same words as the receipt log
+// function checkStock(){
   const ss = SpreadsheetApp.getActiveSpreadsheet();
   const dashboard = ss.getSheetByName("DASHBOARD");
   const StockData = dashboard.getRange("A12:C15").getValues();
