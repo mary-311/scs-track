@@ -8,8 +8,8 @@ page you read and the date you read it.  One section per piece; add a new piece 
 
 ### Auth
 Looked for: Hardcoded API keys, tokens, or secrets in tracked files and git history, and missing environment-variable handling.
-Found: Hardcoded demo key LLDEMO-SMS-5c1e9a07d2b84f63 in send-sms.js on lines 9 and 14, and present in commit 889263c.
-Evidence: git grep -n -i key printed send-sms.js:9 and send-sms.js:14; git log --oneline -S "LLDEMO-SMS" printed 889263c (HEAD -> main) SCS3.6 starting state: stock tool and cards; node send-sms.js stock-export.csv --dry-run | head -1 printed key=LLDEMO-SMS-5c1e9a07d2b84f63.
+Found: Hardcoded demo key LLDEMO-SMS-REDACTED in send-sms.js on lines 9 and 14, and present in commit 889263c.
+Evidence: git grep -n -i key printed send-sms.js:9 and send-sms.js:14; git log --oneline -S "LLDEMO-SMS" printed 889263c (HEAD -> main) SCS3.6 starting state: stock tool and cards; node send-sms.js stock-export.csv --dry-run | head -1 printed key=LLDEMO-SMS-REDACTED.
 
 ### Edge cases
 Ugly inputs, written before trying them: Blank stock count, comma or quotes inside a field, boundary reorder equality, Ng'Ombe Salt Lick, ampersand (&) in text, zero stock.
