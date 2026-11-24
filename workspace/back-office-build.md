@@ -5,9 +5,7 @@
 4. What happens if a number is wrong? The owner adds a correcting row instead of overwriting history.
 5. Who supports it next year? The owner, using the printed card left in the client folder.
 
-Verdict: Sheets.
-Pattern: inventory.
-Because: A single kiosk owner with a phone or laptop tracking dozens to a few hundred stock events a month benefits from a structured three-tab sheet without paying for a server, software vendor, or ongoing developer support.
+Verdict: Sheets.  Pattern: inventory.  Because: A single kiosk owner with a phone or laptop tracking dozens to a few hundred stock events a month benefits from a structured three-tab sheet without paying for a server, software vendor, or ongoing developer support.
 
 ## Validation
 | column | rule | the garbage I typed | refused? |
