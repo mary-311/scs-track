@@ -1,13 +1,19 @@
-# Method note -- SCS4.1
+# SCS4.1 Method Note
 
-## 1. What I set out to do
+## 1.
+YOUR_LINE_1
 
-## 2. What I did, in order
+## 2.
+YOUR_LINE_2
 
-## 3. How I checked it worked
+## 3.
+YOUR_LINE_3
 
-## 4. What went wrong and what I did about it
+## 4.
+YOUR_LINE_4
 
-## 5. What I would do differently next time
+## 5.
+YOUR_LINE_5
 
 ## 6. What I might be wrong about, and how I would find out
+YOUR_LINE_6

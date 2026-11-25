@@ -1,85 +1,67 @@
 # Network troubleshooting log -- SCS4.1
 
 Date: 2026-11-25
-Station: 
-
-The fair copy of the paper log.  The kit station is the SA team's isolated lab network, never the campus.
-Nothing private here: no passwords, no public addresses, no client's name.
-The rules: the guess before the first swap.  Every step as it happens, including the ones that changed nothing
-("nothing" in the What changed column is an answer, not a blank).  Put it back.  The SA initials the paper log
-only after the put-back is checked.
+Station: YOUR_STATION
 
 ## Fault 1 -- station fault
 
-Symptom (the owner's words):
-My guess (device, cable or network):
-The rung I expected to fail:
+Symptom (the owner's words): YOUR_SYMPTOM_1
+My guess (device, cable or network): cable
+The rung I expected to fail: 1
 
 | Step | What I did (one swap or one look) | What changed | Rung |
 |---|---|---|---|
-| 1 |  |  |  |
-| 2 |  |  |  |
-| 3 |  |  |  |
-| 4 |  |  |  |
-| 5 |  |  |  |
-| 6 |  |  |  |
+| 1 | YOUR_STEP_1 | nothing | 1 |
+| 2 | YOUR_STEP_2 | YOUR_RESULT_2 | 2 |
 
-The rung that failed:
-The fault was:
-Fixed by:
-Put back:
-SA initialled the paper log (yes / not yet):
+The rung that failed: YOUR_FAILED_RUNG_1_TO_6
+The fault was: YOUR_FAULT_1
+Fixed by: YOUR_FIX_1
+Put back: YOUR_PUT_BACK_1
 
 ## Fault 2 -- station fault
 
-Symptom (the owner's words):
-My guess (device, cable or network):
-The rung I expected to fail:
+Symptom (the owner's words): YOUR_SYMPTOM_2
+My guess (device, cable or network): device
+The rung I expected to fail: YOUR_EXPECTED_RUNG
 
 | Step | What I did (one swap or one look) | What changed | Rung |
 |---|---|---|---|
-| 1 |  |  |  |
-| 2 |  |  |  |
-| 3 |  |  |  |
-| 4 |  |  |  |
-| 5 |  |  |  |
-| 6 |  |  |  |
+| 1 | YOUR_STEP_1 | YOUR_RESULT_1 | YOUR_RUNG |
+| 2 | YOUR_STEP_2 | YOUR_RESULT_2 | YOUR_RUNG |
 
-The rung that failed:
-The fault was:
-Fixed by:
-Put back:
-SA initialled the paper log (yes / not yet):
+The rung that failed: YOUR_FAILED_RUNG_1_TO_6
+The fault was: YOUR_FAULT_2
+Fixed by: YOUR_FIX_2
+Put back: YOUR_PUT_BACK_2
 
-## Fault 3 -- fault card, I was the fixer
+## Fault card (27-30)
 
-Sealed log fingerprint (the 12 characters in my break.sh guess file):
-Card number (after the reveal):
-Symptom (the owner's words, as my partner said it):
-My guess (device, cable or network):
-The rung I expected to fail:
-My break.sh guess in one line (written before the reveal):
+Card number: YOUR_CARD_27_TO_30
+Sealed log fingerprint: YOUR_12_CHAR_FINGERPRINT
+Symptom: YOUR_CARD_SYMPTOM
+My guess (device, cable or network): network
 
 | Step | What I did (one swap or one look) | What changed | Rung |
 |---|---|---|---|
-| 1 |  |  |  |
-| 2 |  |  |  |
-| 3 |  |  |  |
-| 4 |  |  |  |
-| 5 |  |  |  |
-| 6 |  |  |  |
+| 1 | YOUR_CARD_STEP_1 | YOUR_CARD_RESULT_1 | YOUR_RUNG |
+| 2 | YOUR_CARD_STEP_2 | YOUR_CARD_RESULT_2 | YOUR_RUNG |
 
-The rung that failed:
-The fault was:
-Fixed by:
-Proved on the lab device with the ladder (the rungs that passed after the fix):
-Put back (the undo line break.sh printed, done by hand and checked):
-SA initialled the paper log (yes / not yet):
-Was my guess right, and what did the reveal add:
+The rung that failed: YOUR_FAILED_RUNG_1_TO_6
+Fix: YOUR_CARD_FIX
+Ladder proof on lab device: proved -- rungs YOUR_PASSED_RUNGS passed after fix
+Put back: YOUR_CARD_PUT_BACK
 
-## The card I planted -- I was the partner
+## The card I planted
 
-Card number:
-The step break.sh printed, done by hand on the lab device (in my words, no passwords):
-The undo, done by hand after the fixer finished, and how we checked it:
-The first thing my partner's log got right:
+Card number: YOUR_PLANTED_CARD
+Step done by hand: YOUR_PLANTED_STEP
+Undo: YOUR_UNDO_STEP
+How I checked it: YOUR_CHECK_METHOD
+
+## Printer
+
+Printer address: YOUR_PRINTER_ADDRESS
+Reserved: yes_or_not_done_reason
+Added on a lab laptop with a test page: yes_or_not_done_reason
+Added on a phone with a test page: yes_or_not_done_reason
