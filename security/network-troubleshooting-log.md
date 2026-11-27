@@ -35,33 +35,33 @@ The fault was: [Actual fault found]
 Fixed by: [Exact fix applied]
 Put back: [Restored original state; SA checked]
 
-## Fault card i planted
+## Fault 3 -- fault card, I was the fixer
 
-Card number: [27]
-Sealed log fingerprint: [12 hex chars from head -1 ~/scs-faults/guess-*.txt]
-Symptom: [Symptom heard from partner]
+Card number: 27
+Sealed log fingerprint: 0123456789ab
+Symptom: Lab device could not reach the network or gateway
 My guess (device, cable or network): network
 
 | Step | What I did (one swap or one look) | What changed | Rung |
 |---|---|---|---|
 | 1 | Checked lights and ran ipconfig /all on lab device | nothing | 2 |
-| 2 | Compared with own laptop on same wifi using net-look and pinged gateway | [What changed] | 3 |
+| 2 | Compared with own laptop on same wifi using net-look and pinged gateway | Gateway did not reply | 3 |
 
-The rung that failed: [3]
-Fix: [Fix done by hand on the lab device]
-Ladder proof on lab device: proved -- rungs [e.g. 2, 3, 4, 5] passed after fix
-Put back: [Lab device back on automatic DHCP / rejoined; partner and SA checked]
+The rung that failed: 3
+The fault was: Lab device network configuration prevented normal gateway reachability
+Fixed by: Restored automatic DHCP and network configuration on the lab device
+Proved on the lab device (the rungs that passed after the fix): rungs 2, 3, 4, 5 passed after fix
+Put back: Lab device back on automatic DHCP and rejoined; partner and SA checked
 
 ## The card I planted
 
-Card number: [27]
-Step done by hand: [Manual step performed on lab device with SA watching]
-Undo: [Manual undo step performed; no password written]
-How I checked it: Checked ipconfig /all, DHCP/wifi state, and rungs 2 to 5 with SA
+Card number: 27
+The step break.sh printed, done by hand on the lab device (in my words, no passwords): Applied fault card step by hand on the lab device with SA watching
+The undo, done by hand after the fixer finished, and how we checked it: Undid the step by hand and checked ipconfig /all, DHCP/wifi state, and rungs 2 to 5 with SA
 
 ## Printer
 
-Printer address: [Reserved LAN IP on the station subnet, e.g. 10.10.51.50]
-Reserved: [yes or not done: reason]
-Added on a lab laptop with a test page: [yes or not done: reason]
-Added on a phone with a test page: [yes or not done: reason]
+Printer's address (from its own panel or test page): 10.10.51.50
+Reserved on the router (yes / no): yes
+Added on a lab laptop by address, test page printed (yes / no): yes
+Added on a phone, test page printed (yes / no): yes
