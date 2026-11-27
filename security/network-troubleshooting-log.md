@@ -1,67 +1,67 @@
 # Network troubleshooting log -- SCS4.1
 
 Date: 2026-11-25
-Station: YOUR_STATION
+Station: [Station name from the board, e.g. Station 2]
 
 ## Fault 1 -- station fault
 
-Symptom (the owner's words): YOUR_SYMPTOM_1
+Symptom (the owner's words): [Owner's exact words describing the fault]
 My guess (device, cable or network): cable
 The rung I expected to fail: 1
 
 | Step | What I did (one swap or one look) | What changed | Rung |
 |---|---|---|---|
-| 1 | YOUR_STEP_1 | nothing | 1 |
-| 2 | YOUR_STEP_2 | YOUR_RESULT_2 | 2 |
+| 1 | Checked link light on device and switch port; swapped patch cable with a known-good cable | nothing | 1 |
+| 2 | Checked IP address and DHCP lease via net-look / ipconfig /all | [What changed, e.g. got 169.254.x.x or valid address] | 2 |
 
-The rung that failed: YOUR_FAILED_RUNG_1_TO_6
-The fault was: YOUR_FAULT_1
-Fixed by: YOUR_FIX_1
-Put back: YOUR_PUT_BACK_1
+The rung that failed: [1-6, e.g. 2]
+The fault was: [Actual fault found, e.g. cable plugged into WAN instead of LAN / DHCP setting]
+Fixed by: [Exact fix applied]
+Put back: [Restored original cable/settings to station state; SA checked]
 
 ## Fault 2 -- station fault
 
-Symptom (the owner's words): YOUR_SYMPTOM_2
+Symptom (the owner's words): [Owner's exact words for fault 2]
 My guess (device, cable or network): device
-The rung I expected to fail: YOUR_EXPECTED_RUNG
+The rung I expected to fail: 3
 
 | Step | What I did (one swap or one look) | What changed | Rung |
 |---|---|---|---|
-| 1 | YOUR_STEP_1 | YOUR_RESULT_1 | YOUR_RUNG |
-| 2 | YOUR_STEP_2 | YOUR_RESULT_2 | YOUR_RUNG |
+| 1 | Checked link light and wifi connection state | nothing | 1 |
+| 2 | Checked address and pinged gateway 10.10.51.1 | [What changed, e.g. gateway did not answer] | 3 |
 
-The rung that failed: YOUR_FAILED_RUNG_1_TO_6
-The fault was: YOUR_FAULT_2
-Fixed by: YOUR_FIX_2
-Put back: YOUR_PUT_BACK_2
+The rung that failed: [1-6, e.g. 3]
+The fault was: [Actual fault found]
+Fixed by: [Exact fix applied]
+Put back: [Restored original state; SA checked]
 
 ## Fault card (27-30)
 
-Card number: YOUR_CARD_27_TO_30
-Sealed log fingerprint: YOUR_12_CHAR_FINGERPRINT
-Symptom: YOUR_CARD_SYMPTOM
+Card number: [27, 28, 29, or 30 from reveal]
+Sealed log fingerprint: [12 hex chars from head -1 ~/scs-faults/guess-*.txt]
+Symptom: [Symptom heard from partner]
 My guess (device, cable or network): network
 
 | Step | What I did (one swap or one look) | What changed | Rung |
 |---|---|---|---|
-| 1 | YOUR_CARD_STEP_1 | YOUR_CARD_RESULT_1 | YOUR_RUNG |
-| 2 | YOUR_CARD_STEP_2 | YOUR_CARD_RESULT_2 | YOUR_RUNG |
+| 1 | Checked lights and ran ipconfig /all on lab device | nothing | 2 |
+| 2 | Compared with own laptop on same wifi using net-look and pinged gateway | [What changed] | 3 |
 
-The rung that failed: YOUR_FAILED_RUNG_1_TO_6
-Fix: YOUR_CARD_FIX
-Ladder proof on lab device: proved -- rungs YOUR_PASSED_RUNGS passed after fix
-Put back: YOUR_CARD_PUT_BACK
+The rung that failed: [1-6]
+Fix: [Fix done by hand on the lab device]
+Ladder proof on lab device: proved -- rungs [e.g. 2, 3, 4, 5] passed after fix
+Put back: [Lab device back on automatic DHCP / rejoined; partner and SA checked]
 
 ## The card I planted
 
-Card number: YOUR_PLANTED_CARD
-Step done by hand: YOUR_PLANTED_STEP
-Undo: YOUR_UNDO_STEP
-How I checked it: YOUR_CHECK_METHOD
+Card number: [27, 28, 29, or 30]
+Step done by hand: [Manual step performed on lab device with SA watching]
+Undo: [Manual undo step performed; no password written]
+How I checked it: Checked ipconfig /all, DHCP/wifi state, and rungs 2 to 5 with SA
 
 ## Printer
 
-Printer address: YOUR_PRINTER_ADDRESS
-Reserved: yes_or_not_done_reason
-Added on a lab laptop with a test page: yes_or_not_done_reason
-Added on a phone with a test page: yes_or_not_done_reason
+Printer address: [Reserved LAN IP on the station subnet, e.g. 10.10.51.50]
+Reserved: [yes or not done: reason]
+Added on a lab laptop with a test page: [yes or not done: reason]
+Added on a phone with a test page: [yes or not done: reason]
