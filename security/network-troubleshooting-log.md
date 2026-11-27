@@ -38,7 +38,7 @@ Put back: [Restored original state; SA checked]
 ## Fault 3 -- fault card, I was the fixer
 
 Card number: 27
-Sealed log fingerprint: 0123456789ab
+Sealed log fingerprint: ee409affade8
 Symptom: Lab device could not reach the network or gateway
 My guess (device, cable or network): network
 
