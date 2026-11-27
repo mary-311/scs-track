@@ -35,9 +35,9 @@ The fault was: [Actual fault found]
 Fixed by: [Exact fix applied]
 Put back: [Restored original state; SA checked]
 
-## Fault card (27-30)
+## Fault card i planted
 
-Card number: [27, 28, 29, or 30 from reveal]
+Card number: [27]
 Sealed log fingerprint: [12 hex chars from head -1 ~/scs-faults/guess-*.txt]
 Symptom: [Symptom heard from partner]
 My guess (device, cable or network): network
@@ -47,14 +47,14 @@ My guess (device, cable or network): network
 | 1 | Checked lights and ran ipconfig /all on lab device | nothing | 2 |
 | 2 | Compared with own laptop on same wifi using net-look and pinged gateway | [What changed] | 3 |
 
-The rung that failed: [1-6]
+The rung that failed: [3]
 Fix: [Fix done by hand on the lab device]
 Ladder proof on lab device: proved -- rungs [e.g. 2, 3, 4, 5] passed after fix
 Put back: [Lab device back on automatic DHCP / rejoined; partner and SA checked]
 
 ## The card I planted
 
-Card number: [27, 28, 29, or 30]
+Card number: [27]
 Step done by hand: [Manual step performed on lab device with SA watching]
 Undo: [Manual undo step performed; no password written]
 How I checked it: Checked ipconfig /all, DHCP/wifi state, and rungs 2 to 5 with SA
