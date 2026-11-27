@@ -61,7 +61,7 @@ The undo, done by hand after the fixer finished, and how we checked it: Undid th
 
 ## Printer
 
-Printer's address (from its own panel or test page): 10.10.51.50
-Reserved on the router (yes / no): yes
-Added on a lab laptop by address, test page printed (yes / no): yes
-Added on a phone, test page printed (yes / no): yes
+Printer address: 10.10.51.50
+Reserved: yes
+Added on a lab laptop with a test page: yes
+Added on a phone with a test page: yes
