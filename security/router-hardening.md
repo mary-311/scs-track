@@ -14,3 +14,10 @@ Firmware date seen on the router: noted on admin page (no unapproved update)
 6. [x] WPS off; remote admin from the internet off
 7. [x] Firmware date noted; no unapproved update
 8. [x] Router restarted afterwards and numbers checked again
+
+## Printer
+
+Printer's address: 10.10.51.50
+Reserved on the router: yes
+Added on a lab laptop: yes
+Added on a phone: yes
